@@ -10,6 +10,7 @@ public abstract class AbstractService <T, ID>{
 	
 	protected abstract JpaRepository<T, ID> getRepository();
 	
+	
 	public T findById(ID id) {
 		return getRepository().findById(id).orElseThrow(() -> new ObjectNotFoundException("Objeto encontrado"));
 	}
