@@ -77,7 +77,7 @@ public class GeneroResourceImpl implements GeneroResource{
 
 	@Override
 	public ResponseEntity<Void> delete(Long id) {
-		this.service.delete(null);
+		this.service.delete(id);
 		return ResponseEntity.ok().build();
 	}
 
